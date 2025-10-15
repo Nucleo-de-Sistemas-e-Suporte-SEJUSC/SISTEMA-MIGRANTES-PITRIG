@@ -1,0 +1,113 @@
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    background-color: #1F2937;
+    color: #f0f0f0;
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease, min-width 0.3s ease;
+    overflow: hidden;
+}
+
+/* Sidebar recolhida */
+.sidebar-closed {
+    width: 70px;
+    min-width: 70px;
+}
+
+/* Centraliza o logo quando fechada */
+.sidebar-closed .sidebar-header {
+    justify-content: center;
+    padding: 0 10px 30px;
+}
+
+/* Esconde o nome e títulos quando recolhida */
+.sidebar-closed .logo-name,
+.sidebar-closed .sidebar-section-title,
+.sidebar-closed .nav-item a span.nav-text {
+    display: none;
+}
+
+/* Centraliza ícones na sidebar recolhida */
+.sidebar-closed .nav-icon {
+    margin: 0 auto;
+}
+
+/* Header (PITRIG) */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.logo-name {
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Navegação */
+.sidebar-nav {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.sidebar-section-title {
+    color: #a0a0c0; 
+    padding: 10px 10px 5px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #f0f0f0;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 1rem;
+    font-weight: 500;
+}
+/* NOVO AJUSTE: Garante que o ícone preencha o espaço do link e se centralize */
+.sidebar-closed .nav-item a {
+    /* Remove a margem horizontal para que o ícone ocupe todo o espaço */
+    padding: 12px 0; 
+    justify-content: center; /* Centraliza o ícone dentro do link */
+}
+
+/* NOVO AJUSTE: Remove a margem direita que empurra o ícone */
+.sidebar-closed .nav-icon {
+    margin-right: 30px;
+    width: auto; /* Deixa o ícone centralizar-se naturalmente */
+}
+.nav-icon {
+    margin-right: 15px;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.nav-item.active a {
+    background-color: rgba(74, 144, 226, 0.15);
+    color: #4a90e2;
+    font-weight: 600;
+}
+
+.nav-item:not(.active) a:hover {
+    background-color: #364963;
+    color: white;
+}

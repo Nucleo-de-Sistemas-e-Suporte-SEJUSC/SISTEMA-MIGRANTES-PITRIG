@@ -1,0 +1,125 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 250px; /* alinhado com a sidebar aberta */
+    width: calc(100% - 250px);
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px; /* mais espaço nas laterais */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Quando a sidebar está recolhida */
+.header-compact {
+    left: 70px;
+    width: calc(100% - 70px);
+}
+
+/* Bloco esquerdo */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #1f2937;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Barra de pesquisa central */
+.header-search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f2f4f7;
+    padding: 6px 10px;
+    border-radius: 6px;
+    width: 60%;
+    max-width: 400px;
+    border: 1px solid #e5e7eb;
+}
+
+.search-icon{
+    color:#1f2937;
+    cursor: pointer;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding-left: 8px;
+    color: #1f2937;
+    flex: 1;
+    font-size: 14px;
+}
+
+/* Bloco direito (notificações e perfil) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* espaçamento entre os ícones */
+    margin-right: 80px;
+}
+
+/* Ícone de notificação */
+.notification-icon-container {
+    position: relative;
+    color: #1f2937;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-icon-container svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Badge de notificação */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -6px;
+    background: #ff4d4f;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 2px 5px;
+    min-width: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Perfil do usuário */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #1f2937;
+    cursor: pointer;
+    padding-right: 10px; /* evita colar na borda */
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1f2937;
+}

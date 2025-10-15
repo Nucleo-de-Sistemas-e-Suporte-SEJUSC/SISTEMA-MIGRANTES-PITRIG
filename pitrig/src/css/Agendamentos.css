@@ -1,0 +1,223 @@
+/* Container da Página */
+.agendamentos-page {
+    padding: 20px;
+    background-color: #f4f7f9; /* Fundo levemente cinza */
+    min-height: 100vh;
+}
+
+/* Header da Página (Título e Botão) */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+
+.page-title-group h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: #343a40;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Botões Padrão */
+.btn {
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #6c757d;
+    border: 1px solid #ced4da;
+}
+
+.btn-secondary:hover {
+    background-color: #f8f9fa;
+}
+
+/* ------------------- Cards de Resumo ------------------- */
+.summary-cards-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid transparent; /* Para o card warning */
+}
+
+.card-title {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0 0 5px 0;
+}
+
+.card-value {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #343a40;
+}
+
+.card-subtitle {
+    font-size: 12px;
+    color: #adb5bd;
+    margin: 0;
+}
+
+/* Destaque para o Card de Aviso */
+.summary-card.card-warning {
+    border-left-color: #ffc107; /* Amarelo/Laranja de aviso */
+}
+
+
+/* ------------------- Lista de Agendamentos ------------------- */
+.appointments-list-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.list-title-group h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: #343a40;
+}
+
+.list-subtitle {
+    font-size: 13px;
+    color: #6c757d;
+    margin: 0;
+}
+
+.list-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Input de Pesquisa */
+.search-input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 0 10px;
+    background-color: #f8f9fa;
+    width: 250px;
+}
+
+.search-input-group input {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    background: transparent;
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.search-icon {
+    color: #adb5bd;
+}
+
+/* ------------------- Tabela ------------------- */
+.appointments-table-wrapper {
+    overflow-x: auto;
+}
+
+.appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.appointments-table th {
+    text-align: left;
+    padding: 12px 15px;
+    color: #6c757d;
+    font-weight: 600;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.appointments-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+    color: #495057;
+}
+
+/* Estilo para quebra de linha em Data/Hora (como na imagem) */
+.appointments-table .data-hora {
+    white-space: pre-line;
+    line-height: 1.3;
+}
+
+/* Badge de Status */
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-confirmed {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde escuro */
+}
+
+.status-pending {
+    background-color: #fff3cd; /* Amarelo claro */
+    color: #856404; /* Amarelo escuro */
+}
+
+/* Botão Ações (Três Pontos) */
+.btn-actions {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.btn-actions:hover {
+    background-color: #f8f9fa;
+}
