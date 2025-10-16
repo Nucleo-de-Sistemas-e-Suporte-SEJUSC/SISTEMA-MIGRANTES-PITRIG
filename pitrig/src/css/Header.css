@@ -60,6 +60,13 @@
     cursor: pointer;
 }
 
+.header-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+
 .search-bar input {
     border: none;
     background: transparent;

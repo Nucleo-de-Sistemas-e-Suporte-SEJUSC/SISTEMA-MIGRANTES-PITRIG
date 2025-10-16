@@ -1,8 +1,14 @@
 /* Container da Página */
 .agendamentos-page {
-    padding: 20px;
-    background-color: #f4f7f9; /* Fundo levemente cinza */
+    /* Largura de 100% menos o espaço da sidebar. */
+    width: 100%; 
+    min-width: 1600px;
+    padding: 20px; 
     min-height: 100vh;
+    box-sizing: border-box; 
+    
+    /* 🔑 Adicione o posicionamento de Bloco para a correção funcionar: */
+    display: block;
 }
 
 /* Header da Página (Título e Botão) */
@@ -152,6 +158,7 @@
     background: transparent;
     flex-grow: 1;
     font-size: 14px;
+    color:#343a40;
 }
 
 .search-icon {
@@ -220,4 +227,178 @@
 
 .btn-actions:hover {
     background-color: #f8f9fa;
+}
+
+/* ------------------- CSS POPUP agendamentos ------------------- */
+/* Layout da linha do formulário */
+.form-row {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os campos na mesma linha */
+    margin-bottom: 15px; /* Espaço entre as linhas do formulário */
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 🔑 Labels */
+.form-group label {
+    font-size: 14px;
+    color: #343a40;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* 🔑 Inputs, Selects e Textareas (A CORREÇÃO PRINCIPAL) */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #495057; /* 🔑 Cor do texto digitado (visível) */
+    background-color: #f8f9fa; /* Fundo claro para contraste */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); /* Sombra interna sutil */
+    box-sizing: border-box; 
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Ajuste específico para textarea */
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+h2, p, button.close-btn{
+    color:#343a40;
+
+}
+
+/* Foco nos campos */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+    background-color: #fff;
+}
+
+/* Estilo para placeholders */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #adb5bd;
+}
+/* Remove o contorno padrão do navegador quando o elemento está focado */
+.btn:focus, button.close-btn {
+    outline: none;
+    /* ⚠️ Se você remover o outline, é crucial adicionar um
+       estilo de foco visualmente diferente para manter a acessibilidade.
+    */
+    box-shadow: none; /* Garante que nenhuma sombra de foco indesejada seja mantida */
+}
+
+/* Para navegadores mais modernos, use :focus-visible para manter o outline para navegação por teclado */
+.btn:focus-visible {
+    outline: none;
+    /* Exemplo de foco customizado (Recomendado):
+       box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
+    */
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 600px;
+    border-radius: 8px;
+    max-height: 95vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ==================================== */
+/* ESTILO GLOBAL DO SCROLLBAR CUSTOMIZADO */
+/* Aplique isso a qualquer elemento com overflow-y: auto/scroll */
+/* ==================================== */
+
+/* Oculta o scrollbar em alguns elementos (ex: header da tabela, caso não queira) */
+/* .appointments-table-wrapper::-webkit-scrollbar { display: none; } */
+
+/* Para navegadores WebKit (Chrome, Safari, Edge, Opera) */
+.modal-content::-webkit-scrollbar,
+.select__menu::-webkit-scrollbar /* Classe interna do React Select para o menu dropdown */
+ {
+    width: 8px; /* Largura da barra de rolagem vertical */
+    height: 8px; /* Altura da barra de rolagem horizontal */
+}
+
+.modal-content::-webkit-scrollbar-track,
+.select__menu::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Fundo da trilha da barra de rolagem */
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb,
+.select__menu::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do "polegar" (a parte móvel) */
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover,
+.select__menu::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do "polegar" ao passar o mouse */
+}
+
+/* Para Firefox */
+.modal-content,
+.select__menu {
+    scrollbar-width: thin; /* 'auto' ou 'thin' */
+    scrollbar-color: #888 #f1f1f1; /* polegar e trilha */
 }

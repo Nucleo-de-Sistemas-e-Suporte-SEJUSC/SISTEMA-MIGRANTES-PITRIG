@@ -111,3 +111,91 @@
     background-color: #364963;
     color: white;
 }
+
+/* ---- TOPO DA SIDEBAR ---- */
+.sidebar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px 25px;
+}
+
+/* Botão de abrir/fechar */
+.toggle-sidebar-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, color 0.2s ease;
+    outline: none;
+}
+
+.toggle-sidebar-btn:hover {
+    transform: scale(1.1);
+}
+
+.sidebar-closed .sidebar-top {
+    justify-content: center;
+}
+
+.sidebar-closed .logo-name {
+    display: none;
+}
+
+/* Remove borda e foco feio ao clicar no botão */
+.toggle-sidebar-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, color 0.2s ease;
+    outline: none; /* 🔹 remove o contorno padrão */
+}
+
+.toggle-sidebar-btn:focus {
+    outline: none; /* 🔹 garante que o foco não mostre a borda */
+    box-shadow: none;
+}
+
+.toggle-sidebar-btn:focus-visible {
+    outline: 2px solid #4a90e2; /* 🔹 acessível: mostra borda só se for via teclado */
+    outline-offset: 2px;
+}
+
+.toggle-sidebar-btn:hover {
+    transform: scale(1.1);
+    color: #4a90e2;
+}
+
+.toggle-sidebar-btn:focus,
+.toggle-sidebar-btn:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.sidebar:not(.sidebar-closed) .sidebar-top {
+    justify-content: flex-start;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+.sidebar:not(.sidebar-closed) .toggle-sidebar-btn {
+    margin-left: -10px;
+    margin-right: 15px;
+}
+
+/* 🔹 Quando fechada, botão centralizado */
+.sidebar-closed .sidebar-top {
+    justify-content: center;
+    padding: 15px 0 25px;
+}
+
+.sidebar-closed .logo-name {
+    display: none;
+}

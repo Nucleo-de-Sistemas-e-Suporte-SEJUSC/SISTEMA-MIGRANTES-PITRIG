@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import Agendamentos from './Pages/Agendamentos';
 import './App.css';
 
 const App = () => {
@@ -11,23 +13,22 @@ const App = () => {
     };
 
     return (
-        <div className="app-container">
-            {/* Header fixo no topo */}
-            <Header 
-                onMenuClick={toggleSidebar} 
-                isSidebarOpen={isSidebarOpen} 
-            />
+        <Router>
+            <div className="app-container">
+                {/* Header fixo */}
+                <Header isSidebarOpen={isSidebarOpen} />
 
-            {/* Layout principal (Sidebar + Conteúdo) */}
-            <div className="main-layout">
-                <Sidebar isOpen={isSidebarOpen} />
-                
-                <main className={`content ${!isSidebarOpen ? 'sidebar-closed' : ''}`}>
-                    <h1>Conteúdo Principal do Sistema</h1>
-                    <p>O cabeçalho e a barra lateral estão funcionando juntos!</p>
-                </main>
+                {/* Layout principal */}
+                <div className="main-layout">
+                    <Sidebar isOpen={isSidebarOpen} onToggle={toggleSidebar} />
+
+                    <main className={`content ${!isSidebarOpen ? 'sidebar-closed' : ''}`}>
+                        <Agendamentos /> {/* Mostra a página de agendamentos */}
+                    </main>
+
+                </div>
             </div>
-        </div>
+        </Router>
     );
 };
 

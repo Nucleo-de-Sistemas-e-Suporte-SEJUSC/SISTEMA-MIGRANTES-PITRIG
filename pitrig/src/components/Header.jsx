@@ -1,33 +1,27 @@
 import React from 'react';
-import { FiMenu, FiSearch, FiBell, FiUser } from 'react-icons/fi';
+import { FiSearch, FiBell, FiUser } from 'react-icons/fi';
 import '../Css/Header.css';
 
-const Header = ({ onMenuClick, isSidebarOpen }) => {
+const Header = ({ isSidebarOpen }) => {
     const notificationCount = 1;
 
     return (
-        // 👇 adicionamos uma classe condicional baseada na sidebar
         <header className={`header-container ${!isSidebarOpen ? 'header-compact' : ''}`}>
             
-            {/* 1. Bloco Esquerdo: Menu e Título */}
+            {/* 🔹 Esquerda: agora apenas o título PITRIG */}
             <div className="header-left">
-                <button className="menu-toggle" onClick={onMenuClick} aria-label="Toggle Menu">
-                    <FiMenu size={24} />
-                </button>
+                <h1 className="header-logo">PITRIG</h1>
             </div>
 
-            {/* 2. Bloco Central: Barra de Pesquisa */}
+            {/* 🔹 Centro: barra de pesquisa */}
             <div className="header-search">
                 <div className="search-bar">
                     <FiSearch className="search-icon" size={20} />
-                    <input
-                        type="text"
-                        placeholder="Buscar migrante por nome, documento..."
-                    />
+                    <input type="text" placeholder="Buscar migrante por nome, documento..." />
                 </div>
             </div>
 
-            {/* 3. Bloco Direito: Notificações e Admin */}
+            {/* 🔹 Direita: notificação e admin */}
             <div className="header-right">
                 <div className="notification-icon-container">
                     <FiBell size={24} />
