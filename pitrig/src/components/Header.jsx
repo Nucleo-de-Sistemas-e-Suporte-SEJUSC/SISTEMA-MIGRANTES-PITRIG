@@ -9,9 +9,6 @@ const UserDropdown = ({ onClose }) => (
             <li>
                 <FiUser size={16} /> Meu Perfil
             </li>
-            <li>
-                <FiSettings size={16} /> Configurações
-            </li>
             <li className="separator"></li>
             <li className="logout" onClick={onClose}>
                 <FiLogOut size={16} /> Sair

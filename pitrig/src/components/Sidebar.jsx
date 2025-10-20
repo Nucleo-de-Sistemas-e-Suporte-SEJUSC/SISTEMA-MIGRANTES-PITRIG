@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
+import React from 'react';
+import { FiMenu, FiX, FiHome, FiCalendar, FiUsers, FiFileText, FiBarChart2, FiSettings } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
 import '../Css/Sidebar.css';
 
 const Sidebar = ({ isOpen, onToggle }) => {
     const location = useLocation();
 
-    const navItems = [
-        { name: 'Dashboard', icon: '🏠', path: '/' },
-        { name: 'Agendamento', icon: '📅', path: '/agendamentos' },
-        { name: 'Atendimento', icon: '👥', path: '/atendimento' },
-        { name: 'Relatórios', icon: '📄', path: '/relatorios' },
-        { name: 'Gestão BI', icon: '📊', path: '/gestao-bi' },
-        { name: 'Administração', icon: '⚙️', path: '/administracao' },
-    ];
 
+    const navItems = [
+        { name: 'Dashboard', icon: FiHome, path: '/' },
+        { name: 'Agendamento', icon: FiCalendar, path: '/agendamentos' },
+        { name: 'Atendimento', icon: FiUsers, path: '/atendimento' },
+        { name: 'Relatórios', icon: FiFileText, path: '/relatorios' },
+        { name: 'Gestão BI', icon: FiBarChart2, path: '/gestao-bi' },
+        { name: 'Administração', icon: FiSettings, path: '/administracao' },
+    ];
     const sidebarClass = `sidebar ${isOpen ? '' : 'sidebar-closed'}`;
 
     return (
@@ -39,7 +39,7 @@ const Sidebar = ({ isOpen, onToggle }) => {
                             }`}
                         >
                             <Link to={item.path}>
-                                <span className="nav-icon">{item.icon}</span>
+                                <span className="nav-icon"><item.icon /></span>
                                 <span className="nav-text">{item.name}</span>
                             </Link>
                         </li>
