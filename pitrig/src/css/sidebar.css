@@ -131,6 +131,7 @@
     justify-content: center;
     transition: transform 0.2s ease, color 0.2s ease;
     outline: none;
+    margin-top: -25px;
 }
 
 .toggle-sidebar-btn:hover {

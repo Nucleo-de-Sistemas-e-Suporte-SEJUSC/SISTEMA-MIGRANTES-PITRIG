@@ -1,7 +1,6 @@
 /* Container da Página */
 .agendamentos-page {
-    /* Largura de 100% menos o espaço da sidebar. */
-    width: 100%; 
+
     min-width: 1600px;
     padding: 20px; 
     min-height: 100vh;
@@ -309,6 +308,8 @@ h2, p, button.close-btn{
        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
     */
 }
+
+button.close-bth, 
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -319,7 +320,7 @@ h2, p, button.close-btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99999;
+    z-index: 9999999999999;
 }
 
 .modal-content {
@@ -401,4 +402,43 @@ h2, p, button.close-btn{
 .select__menu {
     scrollbar-width: thin; /* 'auto' ou 'thin' */
     scrollbar-color: #888 #f1f1f1; /* polegar e trilha */
+}
+
+.sidebar-closed .agendamentos-page {
+    /* Nova largura da sidebar no estado FECHADO (apenas ícones). ADAPTE este valor. */
+    margin-left: -180px; /* Exemplo: se a sidebar fechada tiver 60px */
+}
+
+/* ------------------- CSS POPUP FILTROS ------------------- */
+/* 🔑 Container principal do Filtro (para posicionamento e tamanho) */
+.filter-modal-content {
+    background: #fff;
+    padding: 25px;
+    width: 400px; /* Largura menor para o modal de filtros */
+    border-radius: 8px;
+    max-height: 90vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 100000;
+}
+
+.filter-modal-content .modal-header {
+    margin-bottom: 20px;
+}
+
+.filter-modal-content .form-group {
+    margin-bottom: 15px; /* Espaço entre os grupos de filtro */
+}
+
+/* 🔑 Para estilizar o input de data no modal de filtro, se for usado */
+.filter-modal-content input[type="date"] {
+    /* Garante que o input de data use o estilo padrão de form-group input */
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #495057; 
+    background-color: #f8f9fa;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); 
+    box-sizing: border-box; 
+    width: 100%;
 }

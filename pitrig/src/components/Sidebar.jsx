@@ -30,7 +30,6 @@ const Sidebar = ({ isOpen, onToggle }) => {
             </div>
 
             <nav className="sidebar-nav">
-                <p className="sidebar-section-title">Sistema</p>
                 <ul>
                     {navItems.map((item) => (
                         <li

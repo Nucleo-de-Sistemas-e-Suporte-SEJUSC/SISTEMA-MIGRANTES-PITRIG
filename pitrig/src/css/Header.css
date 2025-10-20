@@ -130,3 +130,164 @@
     font-weight: 500;
     color: #1f2937;
 }
+
+/* 🔑 Torna os ícones clicáveis */
+.clickable {
+    cursor: pointer;
+    padding: 5px; /* Para aumentar a área de clique */
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+.clickable:hover {
+    background-color: #f8f9fa;
+}
+
+
+/* ------------------- ESTILOS DO DROPDOWN (NOVO) ------------------- */
+
+/* Containers Wrappers (para posicionamento relativo) */
+.notification-wrapper,
+.user-profile-wrapper {
+    position: relative; /* Pai para posicionar o menu absoluto */
+    display: flex; /* Garante que o container se ajuste */
+}
+
+/* Estilo Básico do Menu Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 45px; /* Desce o menu abaixo do header/ícone */
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1050; /* Acima do header (z-index: 1000) */
+    min-width: 250px;
+    padding: 10px 0;
+    border: 1px solid #e9ecef;
+}
+
+/* Posições Específicas */
+.user-dropdown {
+    right: 0; /* Alinha o menu do usuário à direita do ícone */
+}
+
+.notification-dropdown {
+    right: -10px; /* Ajusta ligeiramente à direita, se necessário */
+    min-width: 300px;
+}
+
+
+/* Estilos para Itens da Lista (User Dropdown) */
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #495057;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-menu li.separator {
+    height: 1px;
+    padding: 0;
+    margin: 5px 0;
+    background-color: #e9ecef;
+    cursor: default;
+}
+
+.dropdown-menu li.logout {
+    color: #dc3545; /* Cor vermelha para Sair */
+}
+.dropdown-menu li.logout:hover {
+    background-color: #fcebeb;
+}
+
+/* Estilos para Notificação Dropdown */
+.dropdown-header {
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 5px;
+    color: #343a40;
+}
+
+.notification-dropdown li {
+    display: block;
+    padding: 8px 20px;
+    line-height: 1.4;
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-dropdown li.unread {
+    background-color: #e9f2ff; /* Fundo leve para novas */
+    font-weight: 500;
+}
+
+.notification-dropdown li.unread .notif-dot {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+.notif-time {
+    display: block;
+    font-size: 11px;
+    color: #adb5bd;
+    margin-top: 2px;
+}
+
+.no-notifications {
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.view-all {
+    text-align: center;
+    font-weight: 500;
+    color: #007bff;
+    border-top: 1px solid #e9ecef;
+    padding: 10px 20px !important;
+}
+
+/* Badge de Notificação */
+.notification-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #dc3545;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 2px 5px;
+    min-width: 18px;
+    text-align: center;
+    line-height: 14px;
+}
