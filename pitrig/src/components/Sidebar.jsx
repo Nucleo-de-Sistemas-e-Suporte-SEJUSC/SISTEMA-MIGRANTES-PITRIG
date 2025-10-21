@@ -8,11 +8,11 @@ const Sidebar = ({ isOpen, onToggle }) => {
 
 
     const navItems = [
-        { name: 'Dashboard', icon: FiHome, path: '/' },
+        { name: 'Dashboard', icon: FiHome, path: '/dashboard' },
         { name: 'Agendamento', icon: FiCalendar, path: '/agendamentos' },
         { name: 'Atendimento', icon: FiUsers, path: '/atendimento' },
         { name: 'Relatórios', icon: FiFileText, path: '/relatorios' },
-        { name: 'Gestão BI', icon: FiBarChart2, path: '/gestao-bi' },
+        { name: 'Gestão BI', icon: FiBarChart2, path: '/gestaoBI' },
         { name: 'Administração', icon: FiSettings, path: '/administracao' },
     ];
     const sidebarClass = `sidebar ${isOpen ? '' : 'sidebar-closed'}`;

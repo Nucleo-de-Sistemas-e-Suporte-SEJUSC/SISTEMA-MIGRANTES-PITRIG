@@ -4,7 +4,9 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Agendamentos from './Pages/Agendamentos';
 import Relatorios from './Pages/Relatorios';
-import Atendimento from './Pages/Atendimento'; 
+import Atendimento from './Pages/Atendimento';
+import Dashboard from './components/dashboard/Dashboard';
+import GestaoBI from './components/gestao-bi/GestaoBI';  
 import './App.css';
 
 const App = () => {
@@ -33,6 +35,8 @@ const App = () => {
                             <Route path="/agendamentos" element={<Agendamentos />} />
                             <Route path="/atendimento" element={<Atendimento />} />
                             <Route path="/relatorios" element={<Relatorios />} />
+                            <Route path="/dashboard" element={<Dashboard />} />
+                            <Route path="/gestaoBI" element={<GestaoBI />} />
                         </Routes>
                     </main>
 
