@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FiSearch, FiBell, FiUser, FiLogOut } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom'; // 🔑 Importação crucial para navegação
-import '../Css/Header.css';
+import '../css/Header.css';
 
 // ===========================================
 // COMPONENTE: Dropdown de Usuário (Admin)
