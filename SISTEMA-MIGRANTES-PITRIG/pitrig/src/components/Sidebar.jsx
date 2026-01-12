@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiMenu, FiX, FiHome, FiCalendar, FiUsers, FiFileText, FiBarChart2, FiSettings } from 'react-icons/fi';
 import { Link, useLocation } from 'react-router-dom';
-import '../css/Sidebar.css';
+import '../css/sidebar.css';
 
 const Sidebar = ({ isOpen, onToggle }) => {
     const location = useLocation();
