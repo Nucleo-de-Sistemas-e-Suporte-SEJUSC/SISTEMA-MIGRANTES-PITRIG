@@ -1,0 +1,444 @@
+/* Container da Página */
+.agendamentos-page {
+
+    min-width: 1600px;
+    padding: 20px; 
+    min-height: 100vh;
+    box-sizing: border-box; 
+    
+    /* 🔑 Adicione o posicionamento de Bloco para a correção funcionar: */
+    display: block;
+}
+
+/* Header da Página (Título e Botão) */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+
+.page-title-group h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: #343a40;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Botões Padrão */
+.btn {
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #6c757d;
+    border: 1px solid #ced4da;
+}
+
+.btn-secondary:hover {
+    background-color: #f8f9fa;
+}
+
+/* ------------------- Cards de Resumo ------------------- */
+.summary-cards-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid transparent; /* Para o card warning */
+}
+
+.card-title {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0 0 5px 0;
+}
+
+.card-value {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #343a40;
+}
+
+.card-subtitle {
+    font-size: 12px;
+    color: #adb5bd;
+    margin: 0;
+}
+
+/* Destaque para o Card de Aviso */
+.summary-card.card-warning {
+    border-left-color: #ffc107; /* Amarelo/Laranja de aviso */
+}
+
+
+/* ------------------- Lista de Agendamentos ------------------- */
+.appointments-list-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.list-title-group h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: #343a40;
+}
+
+.list-subtitle {
+    font-size: 13px;
+    color: #6c757d;
+    margin: 0;
+}
+
+.list-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Input de Pesquisa */
+.search-input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 0 10px;
+    background-color: #f8f9fa;
+    width: 250px;
+}
+
+.search-input-group input {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    background: transparent;
+    flex-grow: 1;
+    font-size: 14px;
+    color:#343a40;
+}
+
+.search-icon {
+    color: #adb5bd;
+}
+
+/* ------------------- Tabela ------------------- */
+.appointments-table-wrapper {
+    overflow-x: auto;
+}
+
+.appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.appointments-table th {
+    text-align: left;
+    padding: 12px 15px;
+    color: #6c757d;
+    font-weight: 600;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.appointments-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+    color: #495057;
+}
+
+/* Estilo para quebra de linha em Data/Hora (como na imagem) */
+.appointments-table .data-hora {
+    white-space: pre-line;
+    line-height: 1.3;
+}
+
+/* Badge de Status */
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-confirmed {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde escuro */
+}
+
+.status-pending {
+    background-color: #fff3cd; /* Amarelo claro */
+    color: #856404; /* Amarelo escuro */
+}
+
+/* Botão Ações (Três Pontos) */
+.btn-actions {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.btn-actions:hover {
+    background-color: #f8f9fa;
+}
+
+/* ------------------- CSS POPUP agendamentos ------------------- */
+/* Layout da linha do formulário */
+.form-row {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os campos na mesma linha */
+    margin-bottom: 15px; /* Espaço entre as linhas do formulário */
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 🔑 Labels */
+.form-group label {
+    font-size: 14px;
+    color: #343a40;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* 🔑 Inputs, Selects e Textareas (A CORREÇÃO PRINCIPAL) */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #495057; /* 🔑 Cor do texto digitado (visível) */
+    background-color: #f8f9fa; /* Fundo claro para contraste */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); /* Sombra interna sutil */
+    box-sizing: border-box; 
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Ajuste específico para textarea */
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+h2, p, button.close-btn{
+    color:#343a40;
+
+}
+
+/* Foco nos campos */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+    background-color: #fff;
+}
+
+/* Estilo para placeholders */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #adb5bd;
+}
+/* Remove o contorno padrão do navegador quando o elemento está focado */
+.btn:focus, button.close-btn {
+    outline: none;
+    /* ⚠️ Se você remover o outline, é crucial adicionar um
+       estilo de foco visualmente diferente para manter a acessibilidade.
+    */
+    box-shadow: none; /* Garante que nenhuma sombra de foco indesejada seja mantida */
+}
+
+/* Para navegadores mais modernos, use :focus-visible para manter o outline para navegação por teclado */
+.btn:focus-visible {
+    outline: none;
+    /* Exemplo de foco customizado (Recomendado):
+       box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
+    */
+}
+
+button.close-bth, 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999999999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 600px;
+    border-radius: 8px;
+    max-height: 95vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ==================================== */
+/* ESTILO GLOBAL DO SCROLLBAR CUSTOMIZADO */
+/* Aplique isso a qualquer elemento com overflow-y: auto/scroll */
+/* ==================================== */
+
+/* Oculta o scrollbar em alguns elementos (ex: header da tabela, caso não queira) */
+/* .appointments-table-wrapper::-webkit-scrollbar { display: none; } */
+
+/* Para navegadores WebKit (Chrome, Safari, Edge, Opera) */
+.modal-content::-webkit-scrollbar,
+.select__menu::-webkit-scrollbar /* Classe interna do React Select para o menu dropdown */
+ {
+    width: 8px; /* Largura da barra de rolagem vertical */
+    height: 8px; /* Altura da barra de rolagem horizontal */
+}
+
+.modal-content::-webkit-scrollbar-track,
+.select__menu::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Fundo da trilha da barra de rolagem */
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb,
+.select__menu::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do "polegar" (a parte móvel) */
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover,
+.select__menu::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do "polegar" ao passar o mouse */
+}
+
+/* Para Firefox */
+.modal-content,
+.select__menu {
+    scrollbar-width: thin; /* 'auto' ou 'thin' */
+    scrollbar-color: #888 #f1f1f1; /* polegar e trilha */
+}
+
+.sidebar-closed .agendamentos-page {
+    /* Nova largura da sidebar no estado FECHADO (apenas ícones). ADAPTE este valor. */
+    margin-left: -180px; /* Exemplo: se a sidebar fechada tiver 60px */
+}
+
+/* ------------------- CSS POPUP FILTROS ------------------- */
+/* 🔑 Container principal do Filtro (para posicionamento e tamanho) */
+.filter-modal-content {
+    background: #fff;
+    padding: 25px;
+    width: 400px; /* Largura menor para o modal de filtros */
+    border-radius: 8px;
+    max-height: 90vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 100000;
+}
+
+.filter-modal-content .modal-header {
+    margin-bottom: 20px;
+}
+
+.filter-modal-content .form-group {
+    margin-bottom: 15px; /* Espaço entre os grupos de filtro */
+}
+
+/* 🔑 Para estilizar o input de data no modal de filtro, se for usado */
+.filter-modal-content input[type="date"] {
+    /* Garante que o input de data use o estilo padrão de form-group input */
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #495057; 
+    background-color: #f8f9fa;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); 
+    box-sizing: border-box; 
+    width: 100%;
+}

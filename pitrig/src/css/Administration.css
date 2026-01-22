@@ -1,0 +1,187 @@
+.admin-page {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  min-width: 1600px;
+}
+
+/* HEADER */
+.admin-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 32px 16px;
+}
+
+.admin-header-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.admin-header-text h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.admin-header-text p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.admin-button {
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.admin-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* MAIN CONTENT */
+.admin-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.admin-tab-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.admin-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* SUMMARY GRID */
+.admin-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+/* TABLE */
+.admin-table-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.admin-table-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-table-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.admin-table-header p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.admin-table-content {
+  padding: 20px;
+}
+
+/* CONFIGURAÇÕES */
+.admin-config-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+
+/* ========== MODAL ========== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999999;
+}
+
+.modal-box {
+    width: 550px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    animation: fadeIn 0.2s ease;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-medium);
+}
+
+.modal-content {
+    max-height: 400px;
+    max-width: 500px;
+    overflow-y: auto;
+}
+
+/* Mini botão */
+.btn-small {
+    padding: 5px 10px;
+    background: var(--danger-color);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.alert-manage-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
