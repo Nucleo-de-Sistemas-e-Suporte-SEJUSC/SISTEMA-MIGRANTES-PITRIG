@@ -1,3 +1,4 @@
+
 /* Container da Página */
 .agendamentos-page {
 
@@ -234,6 +235,7 @@
     display: flex;
     gap: 15px; /* Espaçamento entre os campos na mesma linha */
     margin-bottom: 15px; /* Espaço entre as linhas do formulário */
+    color: black;
 }
 
 .form-group {
@@ -284,7 +286,7 @@ h2, p, button.close-btn{
     border-color: #007bff;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
     outline: none;
-    background-color: #fff;
+    background-color: #ff0000;
 }
 
 /* Estilo para placeholders */
@@ -441,4 +443,37 @@ button.close-bth,
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); 
     box-sizing: border-box; 
     width: 100%;
+}
+/* ================= REACT SELECT - COR DO TEXTO ================= */
+
+/* Texto selecionado */
+.select__single-value {
+    color: #343a40 !important;
+}
+
+/* Texto digitado ao pesquisar */
+.select__input-container {
+    color: #343a40 !important;
+}
+
+/* Placeholder */
+.select__placeholder {
+    color: #adb5bd !important;
+}
+
+/* Opções do dropdown */
+.select__option {
+    color: #343a40 !important;
+}
+
+/* Opção selecionada */
+.select__option--is-selected {
+    background-color: #007bff !important;
+    color: #fff !important;
+}
+
+/* Opção em hover */
+.select__option--is-focused {
+    background-color: #f8f9fa !important;
+    color: #343a40 !important;
 }

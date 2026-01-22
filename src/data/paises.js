@@ -1,5 +1,4 @@
 export const nacionalidadeOptions = [
-    { value: '', label: 'Selecione ou busque...', isDisabled: true }, 
     { value: 'AF', label: 'Afeganistão' },
     { value: 'ZA', label: 'África do Sul' },
     { value: 'AL', label: 'Albânia' },

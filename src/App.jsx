@@ -9,7 +9,8 @@ import Atendimento from './Pages/Atendimento';
 import Dashboard from './components/dashboard/Dashboard';
 import GestaoBI from './components/gestao-bi/GestaoBI';  
 import Administration from './components/Administracao/Administration-puro';
-import { LoginScreen } from './components/LoginScreen'; 
+import LoginScreen from './components/LoginScreen';
+
 import './App.css';
 
 // NOVO COMPONENTE: Contém a lógica de roteamento e renderização condicional

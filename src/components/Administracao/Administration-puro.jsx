@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { SummaryCard } from './SummaryCard-puro';
 import { TabNavigation } from './TabNavigation-puro';
-import { UserTable } from './UserTable-puro';
+import UserTable from './UserTable';
 import { PermissionsSection } from './PermissionsSection-puro';
 import { ConfigurationSection } from './ConfigurationSection-puro';
 import { SystemConfigurationSection } from './SystemConfigurationSection-puro';
@@ -12,11 +12,8 @@ export default function Administration() {
 
   const tabs = ['Usuários', 'Perfis e Permissões', 'Configurações', 'Sistema'];
 
-  const users = [
-    { id: '1', name: 'Ana Costa', email: 'ana.costa@pitrig.govt.br', role: 'Gestor', status: 'Ativo', lastAccess: '15/01/2024, 10:30:00' },
-    { id: '2', name: 'João Santos', email: 'joao.santos@pitrig.govt.br', role: 'Atendente', status: 'Ativo', lastAccess: '15/01/2024, 09:15:00' },
-    { id: '3', name: 'Maria Silva', email: 'maria.silva@pitrig.govt.br', role: 'Atendente', status: 'Inativo', lastAccess: '10/01/2024, 16:45:00' },
-  ];
+ <UserTable />
+
 
   const roles = [
     {
